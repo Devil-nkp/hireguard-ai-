@@ -1,9 +1,7 @@
 #!/bin/bash
-# build.sh
-
 echo "Starting build process..."
 
-# Install system dependencies for OCR
+# Install system dependencies
 echo "Installing system dependencies..."
 apt-get update
 apt-get install -y tesseract-ocr libtesseract-dev poppler-utils
@@ -17,9 +15,9 @@ pip install setuptools wheel
 echo "Installing from requirements.txt..."
 pip install -r requirements.txt
 
-# Download spaCy model
+# Download spaCy model with correct URL
 echo "Downloading spaCy model..."
-python -m spacy download en_core_web_sm
+python -c "import spacy; spacy.cli.download('en_core_web_sm')"
 
 # Download NLTK data
 echo "Downloading NLTK data..."
