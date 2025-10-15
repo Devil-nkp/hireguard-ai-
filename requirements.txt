@@ -14,5 +14,4 @@ seaborn==0.12.2
 wordcloud==1.9.2
 easyocr==1.7.0
 Werkzeug==2.3.7
-gunicorn==21.2.0
-torch==2.0.1  # Added for EasyOCR stability in containers
+gunicorn==21.2.0  # Not needed on PythonAnywhere, but harmless
